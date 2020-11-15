@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    color: blue;
+}
+header div h1 {
+    font-family: 'Cookie', cursive;
+    margin-left: 20px;
+}
+header div p {
+    padding-top: 20px;
+    margin: 13px 20px 0 0;
+    font-weight: bold;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 17px;
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+header nav ul li {
+    border-bottom: solid 4px lightgrey;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+header nav ul li.active {
+    border-bottom: solid 4px blue;
+}
+header nav ul li.active a {
+    color: blue;
+}
+
+@media all and (min-width: 700px) {
+    header {
+        color: lime;
+    }
+}
+@media screen and (min-width: 1024px) {
+    header nav {
+        position: absolute;
+        right: 100px;
+        top: 5px;
+        width: 25%;
+    }
+    header nav ul li {
+        padding-top: 26px;
+    }
+    header nav ul li {
+        border-bottom: none;
+        border-top: solid 2px transparent;
+    }
+    header nav ul li.active {
+        border-bottom: none;
+        border-top: solid 2px blue;
+    }
+}
