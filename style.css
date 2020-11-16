@@ -44,12 +44,189 @@ header nav ul li.active {
 header nav ul li.active a {
     color: blue;
 }
+#second {
+    margin: 0 20px;
+}
+#searchbar {
+    margin: 0 20px;
+    box-sizing: content-box;
+    height: 40px;
+    position: relative;
+}
+#location {
+    position: absolute;
+    left: -5px;
+    width: 40px;
+    height: 110%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #F2F2F2;
+}
+.fa-map-marker-alt {
+    margin: 14px 14px;
+}
+input {
+    height: 100%;
+    width: 75%;
+    padding: 1px 20px;
+    margin-left: 30px;
+    border: solid 1px #F2F2F2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+#search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    border-radius: 10px;
+    background-color: #0065FC;
+    height: 110%;
+}
+#search p {
+    display: none;
+}
+.fa-search {
+    color: white;
+    margin: 15px 15px;
+}
+#filtre-container {
+    margin-top: 20px;
+}
+#filtre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+#filtre h3 {
+    margin-bottom: 10px;
+}
+#filtre ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+#filtre ul li {
+    border: solid 2px #F2F2F2;
+    position: relative;
+    box-sizing: content-box;
+    border-radius: 30px;
+    padding: 1px 30px 1px 50px;
+    margin: 7px 0;
+}
+#filtre ul li .absolute {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    height: 110%;
+    width: 45px;
+    border-radius: 50px;
+    background-color: #DEEBFF;
+}
+.fa-money-bill-wave, .fa-heart, .fa-dog {
+    color: #0065FC;
+    margin: 15px 13px;
+}
+.fa-child {
+    color: #0065FC;
+    margin: 15px 16px;
+}
+#filtre ul li p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+#filtre-container #remarque {
+    display: flex;
+    margin: 20px;
+}
+#remarque #icon {
+    border: solid 2px #F2F2F2;
+    height: 22px;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+#remarque #icon .fa-info {
+    color: #0065FC;
+    margin: 2px 8px;
+}
+#filtre-container #remarque p {
+    margin: 3px 0 0 0;
+}
+aside {
+    background: #F2F2F2;
+}
+aside #chart {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+aside #chart .fa-chart-line {
+    margin-top: 21px;
+}
+aside #allcards .card {
+    display: flex;
+    background-color: white;
+    margin: 9px 20px;
+    border-radius: 15px;
+}
+aside #allcards .card img {
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+aside #allcards .card .details {
+    margin: 10px 40px 0 10px;
+    font-size: 0.9rem;
+}
+aside #allcards .card .details h3, p {
+    margin: 0;
+}
+aside #allcards .card .details h3 {
+    font-weight: bold;
+}
+aside #allcards .card .details .stars {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #0065FC;
+}
+aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:nth-child(3) .details .stars .fa-star:nth-child(5) {
+    color: #F2F2F2;
+}
 
+/*Responsive avec media query*/
 @media all and (min-width: 700px) {
-    header {
-        color: lime;
+    #searchbar {
+       width: 40%;
+    }
+    .fa-search /*.fa-search::before*/ {
+       display: none;
+    }
+    #search p {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 12px;
+    }
+    #search {
+        width: 100px;
+        border-radius: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #0065FC;
+        height: 110%;
+    }
+    #filtre ul {
+        justify-content: space-around;
+    }
+    #filtre ul li {
+        margin-right: 5px;
     }
 }
+
 @media screen and (min-width: 1024px) {
     header nav {
         position: absolute;
@@ -67,5 +244,17 @@ header nav ul li.active a {
     header nav ul li.active {
         border-bottom: none;
         border-top: solid 2px blue;
+    }
+    #searchbar {
+        width: 30%;
+    }
+    #filtre {
+        justify-content: start;
+    }
+    #filtre h3 {
+        margin-right: 20px;
+    }
+    #filtre ul li {
+        margin-right: 20px;
     }
 }
