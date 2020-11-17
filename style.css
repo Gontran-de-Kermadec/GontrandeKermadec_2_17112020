@@ -158,6 +158,7 @@ input {
 }
 aside {
     background: #F2F2F2;
+    padding-bottom: 30px;
 }
 aside #chart {
     display: flex;
@@ -196,8 +197,79 @@ aside #allcards .card .details .stars {
 aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:nth-child(3) .details .stars .fa-star:nth-child(5) {
     color: #F2F2F2;
 }
+#accomodation {
+    margin: 20px;
+}
+#accomodation #allhotel .hotel {
+    box-shadow: 0 0 1em gray;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    margin: 10px 0;
+}
+#accomodation #allhotel .hotel img {
+    height: 100px;
+    width: 97.5%;
+    border-radius: 12px 12px 0 0;
+    margin: 4px;
+}
+#accomodation #allhotel .hotel h3, .hotel p, .hotel .stars {
+    margin-left: 10px;
+}
+#accomodation #allhotel .hotel h3 {
+    margin: 0 0 2px 10px;
+}
+#accomodation #allhotel .hotel .stars {
+    color: #0065FC;
+    font-size: 00.8rem;
+    margin-top: 5px;
+}
+#accomodation #allhotel .hotel:nth-child(1) .stars .fa-star:nth-child(5), .hotel:nth-child(3) .stars .fa-star:nth-child(5), .hotel:nth-child(4) .stars .fa-star:nth-child(4),  .hotel:nth-child(4) .stars .fa-star:nth-child(5), .hotel:nth-child(5) .stars .fa-star:nth-child(5)  {
+    color: #F2F2F2;
+}
+#accomodation #plus {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    cursor: pointer;
+}
+#activites #port, #pomegues, #frioul, #calanques, #notredame, #longchamp {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 1em gray;
+    background-size: cover;
+    margin: 20px;
+    height: 180px;
+}
+#activites #port {
+    background: url("images/miniport.jpg") no-repeat center;
+}
+#activites #pomegues {
+    background: url("images/minipomeguesl.jpg") no-repeat center;
+}
+#activites #frioul {
+    background: url("images/minifrioul.jpg") no-repeat center;
+}
+#activites #calanques {
+    background: url("images/minicalanques.jpg") no-repeat center;
+}
+#activites #notredame {
+    background: url("images/mininotredame.jpg") no-repeat center;
+}
+#activites #longchamp {
+    background: url("images/minilongchamp.jpg") no-repeat center;
+}
+#activites div p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 0 0 15px 15px;
+}
 
 /*Responsive avec media query*/
+/*Ipad screen*/
 @media all and (min-width: 700px) {
     #searchbar {
        width: 40%;
@@ -225,8 +297,47 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
     #filtre ul li {
         margin-right: 5px;
     }
+    #accomodation #allhotel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #accomodation #allhotel .hotel {
+        width: 300px;
+    }
+    #activites #img-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(250px, 4);
+    }
+    #activites #port {
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        height: 450px;
+    }
+    #activites #pomegues {
+        height: 230px;
+    }
+    /*#activites #frioul {
+        flex: 1;
+    }*/
+    #activites #calanques {
+        background: url("images/calanques.jpg") no-repeat center;
+        grid-row-start: 3;
+        grid-row-end: span 2;
+        height: 450px;
+    }
+    #activites #notredame {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    #activites #longchamp {
+        height: 230px;
+        grid-row-start: 4;
+        grid-column: 2;
+    }
 }
-
+/*Large screen*/
 @media screen and (min-width: 1024px) {
     header nav {
         position: absolute;
@@ -256,5 +367,52 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
     }
     #filtre ul li {
         margin-right: 20px;
+    }
+    #hebergement {
+        position: relative;
+    }
+    #hebergement aside {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        border-radius: 15px;
+        width: 30%;
+        height: 515px;
+        padding-bottom: 0;
+    }
+    aside #allcards .card .details, aside #allcards .card .details .stars {
+        font-size: 0.6rem;
+    }
+    aside #allcards .card {
+        margin-bottom: 30px;
+    }
+    aside #allcards .card .details p {
+        margin-top: 5px;
+    }
+    aside #allcards .card .details .stars {
+        margin-top: 2.5rem;
+    }
+    #hebergement section {
+        width: 65%;
+    }
+    #accomodation {
+        background: #F2F2F2;
+        border-radius: 15px;
+    }
+    #accomodation #firsth3 {
+        margin: 0 0 18px 35px;
+        padding-top: 20px;
+    }
+    #accomodation #allhotel {
+        padding: 0 20px;
+    }
+    #accomodation #allhotel .hotel {
+        width: 31%;
+        background: white;
+        font-size: 0.7rem;
+    }
+    #accomodation #plus {
+        margin-left: 35px;
+        padding-bottom: 30px;
     }
 }
