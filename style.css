@@ -5,15 +5,19 @@ body {
     padding: 0;
     font-family: 'Raleway', sans-serif;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 header div {
     display: flex;
     justify-content: space-between;
     font-size: 17px;
     color: blue;
 }
-header div h1 {
-    font-family: 'Cookie', cursive;
-    margin-left: 20px;
+header div img {
+    margin: 20px 0 0 20px;
+    height: 40px;
 }
 header div p {
     padding-top: 20px;
@@ -47,8 +51,11 @@ header nav ul li.active a {
 #second {
     margin: 0 20px;
 }
+#second h2 {
+    margin-bottom: 5px;
+}
 #searchbar {
-    margin: 0 20px;
+    margin: 20px 20px 0 20px;
     box-sizing: content-box;
     height: 40px;
     position: relative;
@@ -118,11 +125,16 @@ input {
     padding: 1px 30px 1px 50px;
     margin: 7px 0;
 }
+#filtre ul li:hover {
+    background-color: #0065FC;
+    color: white;
+    transition: 0.5s;
+}
 #filtre ul li .absolute {
     position: absolute;
     left: -2px;
     top: -2px;
-    height: 110%;
+    height: 105%;
     width: 45px;
     border-radius: 50px;
     background-color: #DEEBFF;
@@ -169,10 +181,15 @@ aside #chart .fa-chart-line {
     margin-top: 21px;
 }
 aside #allcards .card {
+    margin: 9px 20px;
+    /*border-radius: 15px;*/
+}
+aside #allcards .card a {
     display: flex;
     background-color: white;
-    margin: 9px 20px;
+    margin: 0;
     border-radius: 15px;
+    box-shadow: 0 0 1em gray;
 }
 aside #allcards .card img {
     margin: 5px;
@@ -235,12 +252,21 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
 #activites #port, #pomegues, #frioul, #calanques, #notredame, #longchamp {
     position: relative;
     border-radius: 15px;
-    box-shadow: 0 0 1em gray;
+    box-shadow: 0 0 1em #F2F2F2;
     background-size: cover;
     margin: 20px;
+    display: block;
     height: 180px;
 }
-#activites #port {
+#activites {
+    margin-top: 50px;
+}
+#activites h3 {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#activites #img-container #port {
     background: url("images/miniport.jpg") no-repeat center;
 }
 #activites #pomegues {
@@ -258,19 +284,40 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
 #activites #longchamp {
     background: url("images/minilongchamp.jpg") no-repeat center;
 }
-#activites div p {
+#activites div div {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 30px;
+    height: 40px;
     background-color: white;
-    padding: 10px 0;
     border-radius: 0 0 15px 15px;
+    
+}
+#activites div div p {
+    font-weight: bold;
+    margin: 10px 0 0 15px;
+}
+footer {
+    background-color: #F2F2F2;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+footer div {
+    margin: 20px 0 0 20px;
+}
+footer div p{
+    line-height: 2em;
 }
 
 /*Responsive avec media query*/
+/*responsive searchbar*/
+@media screen and (min-width: 500px) {
+    #searchbar {
+       width: 70%;
+    }
+}    
 /*Ipad screen*/
-@media all and (min-width: 700px) {
+@media screen and (min-width: 700px) {
     #searchbar {
        width: 40%;
     }
@@ -297,6 +344,14 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
     #filtre ul li {
         margin-right: 5px;
     }
+    #accomodation {
+        background: #F2F2F2;
+        border-radius: 15px;
+    }
+    #accomodation #firsth3 {
+        margin: 0 0 18px 35px;
+        padding-top: 20px;
+    }
     #accomodation #allhotel {
         display: flex;
         flex-wrap: wrap;
@@ -305,10 +360,14 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
     #accomodation #allhotel .hotel {
         width: 300px;
     }
+    #accomodation #plus {
+        margin-left: 35px;
+        padding-bottom: 30px;
+    }
     #activites #img-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(250px, 4);
+        grid-template-rows: 250px 250px 250px 250px;
     }
     #activites #port {
         grid-row-start: 1;
@@ -316,15 +375,19 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
         height: 450px;
     }
     #activites #pomegues {
+        background: url("images/pomegues.jpg") no-repeat center;
         height: 230px;
     }
-    /*#activites #frioul {
-        flex: 1;
-    }*/
+    #activites #frioul {
+        grid-row: 2;
+        grid-column: 2;
+        margin-top: 40px;
+    }
     #activites #calanques {
         background: url("images/calanques.jpg") no-repeat center;
         grid-row-start: 3;
         grid-row-end: span 2;
+        grid-column: 1;
         height: 450px;
     }
     #activites #notredame {
@@ -335,6 +398,15 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
         height: 230px;
         grid-row-start: 4;
         grid-column: 2;
+        margin-top: -10px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+    }
+    footer div h3{
+        margin-top: 0;
     }
 }
 /*Large screen*/
@@ -411,8 +483,30 @@ aside #allcards .card:nth-child(2) .details .stars .fa-star:nth-child(5), .card:
         background: white;
         font-size: 0.7rem;
     }
-    #accomodation #plus {
-        margin-left: 35px;
-        padding-bottom: 30px;
+    #activites #img-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 250px 250px;
+    }
+    #activites #pomegues {
+        background: url("images/minipomeguesl.jpg") no-repeat center;
+    }
+    #activites #calanques {
+        grid-row: 1;
+        grid-column: 3;
+    }
+    #activites #notredame {
+        grid-row: 1;
+        grid-column: 4;
+    }
+    #activites #longchamp {
+        grid-row: 2;
+        grid-column: 4;
+    }
+    #activites div div p {
+        letter-spacing: -1px;
+    }
+    footer div:nth-child(3) {
+        width: 40%;
     }
 }
