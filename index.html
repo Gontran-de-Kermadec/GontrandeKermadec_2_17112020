@@ -10,7 +10,7 @@
     <body>
         <header>
             <div>
-                <img src="images/logo.png" alt="Logo">
+                <img src="images/logo.png" alt="Logo Reservia">
                 <p>S'inscrire</p>
             </div>
             <nav>
@@ -24,6 +24,7 @@
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
+    <!--partie barre de recherche-->
             <div class="searchbar">
                 <div class="searchbar__icon">
                     <i class="fas fa-map-marker-alt"></i>
@@ -34,45 +35,45 @@
                     <p>Rechercher</p>
                 </div>           
             </div>
+    <!--partie contenant le filtre-->
             <div class="filtre-conteneur">
                 <div class="filtre-conteneur__filtre">
                     <h3>Filtres</h3>
                     <ul>
-                        <li class="relative">
-                            <div class="absolute"><i class="fas fa-money-bill-wave"></i></div>                     
+                        <li>
+                            <div class="filtre__icon"><i class="fas fa-money-bill-wave"></i></div>                     
                             <p>Économique</p>
                         </li>
-                        <li class="relative">
-                            <div class="absolute"><i class="fas fa-child"></i></div>                        
+                        <li>
+                            <div class="filtre__icon"><i class="fas fa-child"></i></div>                        
                             <p>Familial</p>
                         </li>
-                        <li class="relative">
-                            <div class="absolute"><i class="fas fa-heart"></i></div>
+                        <li>
+                            <div class="filtre__icon"><i class="fas fa-heart"></i></div>
                             <p>Romantique</p>
                         </li>
-                        <li class="relative">
-                            <div class="absolute"><i class="fas fa-dog"></i></div>
+                        <li>
+                            <div class="filtre__icon"><i class="fas fa-dog"></i></div>
                             <p>Animaux autorisés</p>
                         </li>
                     </ul>
                 </div>
                 <div class="filtre-conteneur__remarque">
-                    <div class="remarque__icon">
-                        <i class="fas fa-info"></i>
-                    </div>
+                    <div class="remarque__icon"><i class="fas fa-info"></i></div>
                     <p>Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>  
             </div>
             <section class="hebergement" id="hebergement">
-                <aside>
+    <!--aside qui encadre la partie les plus populaires-->
+                <aside> 
                     <div class="hebergement__chart">
                         <h2>Les plus populaires</h2>
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="hebergement__allcards">
                         <div class="card">
-                            <a href="#">
-                                <div class="img-conteneur">
+                            <a href="">
+                                <div class="card__img-conteneur">
                                     <img src="images/soleil_matin.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="card__infos">
@@ -89,8 +90,8 @@
                             </a>
                         </div>
                         <div class="card">
-                            <a href="#">
-                                <div class="img-conteneur" id="img-conteneur--width">
+                            <a href="">
+                                <div class="card__img-conteneur" id="img-conteneur--width">
                                     <img src="images/coeur_eau.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="card__infos">
@@ -107,8 +108,8 @@
                             </a>                        
                         </div>
                         <div class="card">
-                            <a href="#">
-                                <div class="img-conteneur">
+                            <a href="">
+                                <div class="card__img-conteneur">
                                     <img src="images/bleu_blanc.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="card__infos">
@@ -126,12 +127,13 @@
                         </div>
                     </div>
                 </aside>
-                <div class="hebergement__accomodation">
-                    <h2 id="firsth3">Hébergements à Marseille</h2>
+    <!--div au sein de laquelle on trouve les hébergements-->
+                <div class="hebergement__accomodation"> 
+                    <h2 id="h2--modification">Hébergements à Marseille</h2>
                     <div class="accomodation__allhotels">
                         <div class="hotel">
                             <a href="">
-                                <div class="accomodation__img">
+                                <div class="hotel__img-conteneur">
                                     <img src="images/cannebiere.jpg" alt="Chambre dans une auberge de jeunesse">
                                 </div>
                                 <div class="accomodation__infos">
@@ -148,8 +150,8 @@
                             </a>
                         </div>
                         <div class="hotel">
-                            <a href="#">
-                                <div class="accomodation__img">
+                            <a href="">
+                                <div class="hotel__img-conteneur">
                                     <img src="images/hotel_port.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="accomodation__infos">
@@ -166,8 +168,8 @@
                             </a>
                         </div>
                         <div class="hotel">
-                            <a href="#">
-                                <div class="accomodation__img">
+                            <a href="">
+                                <div class="hotel__img-conteneur">
                                     <img src="images/mouette.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="accomodation__infos">
@@ -184,8 +186,8 @@
                             </a>                       
                         </div>
                         <div class="hotel">
-                            <a href="#">
-                                <div class="accomodation__img">
+                            <a href="">
+                                <div class="hotel__img-conteneur">
                                     <img src="images/mer.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="accomodation__infos">
@@ -202,8 +204,8 @@
                             </a>                        
                         </div>
                         <div class="hotel">
-                            <a href="#">
-                                <div class="accomodation__img">
+                            <a href="">
+                                <div class="hotel__img-conteneur">
                                     <img src="images/panier.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="accomodation__infos">
@@ -220,8 +222,8 @@
                             </a>                       
                         </div>
                         <div class="hotel">
-                            <a href="#">
-                                <div class="accomodation__img">
+                            <a href="">
+                                <div class="hotel__img-conteneur">
                                     <img src="images/amina.jpg" alt="Chambre d'hôtel">
                                 </div>
                                 <div class="accomodation__infos">
@@ -238,13 +240,14 @@
                             </a>                       
                         </div>
                     </div>
-                    <p id="plus">Afficher plus</p>
+                    <p id="afficher__plus">Afficher plus</p>
                 </div>
             </section>
+    <!--section des activités-->
             <section class="activites" id="activites">
                 <h2>Activités à Marseille</h2>
                 <div class="activites__conteneur">
-                    <a href="#" id="port">
+                    <a href="" id="port"> 
                         <div class="activites__element activites__element--height">
                             <div id="element__img--port" class="element__img">
                                 <img src="images/port.jpg" alt="Vieux port de Marseille">
@@ -252,7 +255,7 @@
                             <p>Vieux Port</p>                  
                         </div>
                     </a>
-                    <a href="#" id="pomegues">
+                    <a href="" id="pomegues">
                         <div class="activites__element activites__element--height">
                             <div id="element__img--pomegues" class="element__img">
                                 <img src="images/pomegues.jpg" alt="Fort de Pomègues">
@@ -260,7 +263,7 @@
                             <p>Fort de Pomègues</p>                  
                         </div>
                     </a>
-                    <a href="#" id="frioul">
+                    <a href="" id="frioul">
                         <div class="activites__element">
                             <div class="element__img">
                                 <img src="images/frioul.jpg" alt="Îles du Frioul au loin">
@@ -268,15 +271,15 @@
                             <p>Îles du Frioul</p>                  
                         </div>
                     </a>
-                    <a href="#" id="calanques">
+                    <a href="" id="calanques">
                         <div class="activites__element activites__element--height">
                             <div id="element__img--calanques" class="element__img">
                                 <img src="images/calanques.jpg" alt="Vue sur la mer depuis les Calanques">
                             </div>
-                            <p>Parc National des Calanques</p>                  
+                            <p class="font-size--modification">Parc National des Calanques</p>                  
                         </div>
                     </a>
-                    <a href="#" id="notredame">
+                    <a href="" id="notredame">
                         <div class="activites__element">
                             <div class="element__img">
                                 <img src="images/notre-dame.jpg" alt="Eglise Notre-Dame-de-la-Garde">
@@ -284,7 +287,7 @@
                             <p>Notre-Dame-de-la-Garde</p>                  
                         </div>
                     </a>
-                    <a href="#" id="longchamp">
+                    <a href="" id="longchamp">
                         <div class="activites__element activites__element--height">
                             <div id="element__img--longchamp" class="element__img">
                                 <img src="images/longchamp.jpg" alt="Parc Longchamp">
